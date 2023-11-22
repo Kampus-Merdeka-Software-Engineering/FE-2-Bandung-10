@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Hotel</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    
+
+</head>
+<body>
+<!-- Header Start -->
+<header>
+    <a href="#"><img src="/images/logo.png" class="logo" width="150" height="120"></a>
+
+    <div>
+      <ul id="navbar">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="./html/rooms.html">Rooms</a></li>
+          <li><a href="./html/facilities.html">Facilities</a></li>
+          <li><a href="./html/faq.html">Faq</a></li>
+          <li><a href="./html/ourteam.html">Our Teams</a></li>
+          <li><a id="login" href="/login/login.html"><i class="fas fa-user"></i></a></li>
+          <a href="#" id="close"><i class="fas fa-times" style="color: #B9A13F;"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+      <a href="/login/login.html"><i class="fas fa-user" style="color: #B9A13F;"></i></a>
+      <i id="bar" class="fas fa-outdent" style="color: #B9A13F;"></i>
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Home -->
+<section class="slide-main">
+    <!-- Image Slide -->
+    <div class="wrapper-main">
+        <div class="text-main">
+            <h1>Luxury Hotel</h1>
+            <p><br>Selamat datang disuatu kenyamanan</p>
+            <a href="#about" class="buttons">View More</a>
+        </div>
+        <img src="/images/Luxury Hotel.jpg" style="width: 100%; height: 100%;">
+    </div>
+    
+    <div class="wrapper-main">
+        <div class="text-main">
+            <h1>Luxury Hotel</h1>
+            <p><br>Beberapa rekomendasi untuk kalian</p>
+            <a href="#recomen" class="buttons">View More</a>
+        </div>
+        <img src="/images/hotel2.jpg" style="width: 100%; height: 100%;">
+    </div>
+    
+    <div class="wrapper-main">
+        <div class="text-main">
+            <h1>Luxury Hotel</h1>
+            <p><br>Selamat datang disuatu kenyamanan</p>
+            <a href="#" class="buttons">View More</a>
+        </div>
+        <img src="/images/hotel3.jpg" style="width: 100%; height: 100%;">
+    </div>
+    
+    <!-- Button Prev and Next -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    <!-- Dots/Colomn -->
+    <div class="dots-main" style="text-align:center">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+    </div>
+</section>
+
+<!-- About Hotel -->
+<section class="about" id="about">
+    <div class="row-about">
+        <h1>About Us</h1>
+        <div class="text-about">
+            <h2>Luxury Hotel</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit est, laboriosam impedit, quae beatae amet ad modi esse sed eum rerum et aliquid? Ipsum nostrum in debitis veritatis rem commodi?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit est, laboriosam impedit, quae beatae amet ad modi esse sed eum rerum et aliquid? Ipsum nostrum in debitis veritatis rem commodi?</p>
+        </div>
+    </div>
+</section>
+<!-- End About Hotel -->
+
+
+<!-- Start Recomendation -->
+<section class="recomen" id="recomen">
+    <div class="head-recomen">
+        <!-- <span>Explore</span> -->
+        <h2>Recomendation Rooms</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, <br>
+            adipisicing elit. Dolor quos illo</p>
+    </div>
+
+    <div class="box-recomen">
+        <div class="box">
+            <img src="/images/Executive Spesial.jpg" alt="">
+            <h3>Executive Spesial</h3>
+            
+            <p class="price">
+                <span>Rp.1.000.000 /</span> Per Night
+            </p>
+
+            <div class="box-btn">
+                <a href="/html/form.html" class="book">Book Now</a>
+                <a href="/html/rooms.html#executive" class="view">More Info</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="/images/Executive Epic.jpg" alt="">
+            <h3>Executive Epic</h3>
+
+            <p class="price">
+                <span>Rp.1.500.000 /</span> Per Night
+            </p>
+
+            <div class="box-btn">
+                <a href="/html/form.html" class="book">Book Now</a>
+                <a href="/html/rooms.html#executive" class="view">More Info</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="/images/Executive Legendary.jpg" alt="">
+            <h3>Executive Legendary</h3>
+
+            <p class="price">
+                <span>Rp.2.000.000 /</span> Per Night
+            </p>
+
+            <div class="box-btn">
+                <a href="/html/form.html" class="book">Book Now</a>
+                <a href="/html/rooms.html#executive" class="view">More Info</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Recomendation -->
+
+
+<!-- End Home -->
+
+<!-- Footer Start -->
+<footer>
+    <div class="footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Luxury Hotel</h4>
+                <ul>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#faq">Faq</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Tipe-tipe Rooms</h4>
+                <ul>
+                    <li><a href="#service">Deluxe Basic</a></li>
+                    <li><a href="#service">Deluxe Common</a></li>
+                    <li><a href="#service">Deluxe Rare</a></li>
+                    <li><a href="#service">Executive Spesial</a></li>
+                    <li><a href="#service">Executive Epic</a></li>
+                    <li><a href="#service">Executive Legendary</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a>LuxuryHotel@gmail.co.id</a> <i class="uil uil-envelope-alt email"></i> </li>
+                    <li><a>(021) 73432553</a><i class="uil uil-phone-alt"></i></li>
+                    <li><a>(021) 70459586</a><i class="uil uil-phone-alt"></i></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Partners</h4>
+                <div class="social-links">
+                    <a href="#footer"><img src="/images/unsika.png" alt="partners" width="30" height="30"></a>
+                    <a href="#footer"><img src="/images/unj.png" alt="partners" width="30" height="30"></a>
+                    <a href="#footer"><img src="/images/unpad.png" alt="partners" width="40" height="35"></a>
+                    <a href="#footer"><img src="/images/unej.png" alt="partners" width="30" height="30"></a>
+                    <a href="#footer"><img src="/images/unnes.png" alt="partners" width="30" height="40"></a>
+                    <a href="#footer"><img src="/images/KM.png" alt="partners" width="30" height="30"></a>
+                    <a href="#footer"><img src="/images/msib1.png" alt="partners" width="30" height="30"></a>
+                    <a href="#footer"><img src="/images/revou.png" alt="partners" width="30" height="30"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="color:#B9A13F; text-align: center; display: block; line-height: 1.9rem; margin-top: 4rem; margin-bottom: 0;">&#169; 2023 - Made by Luxury Hotel</p>
+</footer>
+<!-- Footer End -->
+<script src="/js/script.js"></script>    
+</body>
+</html>

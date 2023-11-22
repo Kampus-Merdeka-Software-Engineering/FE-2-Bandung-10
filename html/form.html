@@ -2,16 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv=""X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/form.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    
-    <title>Formulir</title>
+    <title>Form</title>
+    <link rel="stylesheet" href="/css/form.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
 </head>
+
 <body>
+<!-- Header Start -->
+<header>
+    <a href="#"><img src="/images/logo.png" class="logo" width="150" height="120"></a>
+
+    <div>
+      <ul id="navbar">
+          <li><a class="active" href="/index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="faq.html">Faq</a></li>
+          <li><a href="ourteam.html">Our Teams</a></li>
+          <li><a id="login" href="login.html"><i class="fas fa-user"></i></a></li>
+          <a href="#" id="close"><i class="fas fa-times" style="color: #B9A13F;"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+      <a href="login.html"><i class="fas fa-user" style="color: #B9A13F;"></i></a>
+      <i id="bar" class="fas fa-outdent" style="color: #B9A13F;"></i>
+    </div>
+</header>
+<!-- End Header -->
     <div class="container">
-        <header>Registration</header>
+        <h1>Booking Rooms</h1>
 
         <form action="#">
             <div class="form first">
@@ -68,14 +92,11 @@
                             <span class="btnText">Reset</span>
                             <box-icon name='reset'></box-icon>
                         </div>
-        
                     </div>
                 </div>
             </div>
-
         </form>
     </div>
-
     <script src="./js/form.js"></script>
 </body>
 </html>

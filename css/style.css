@@ -7,32 +7,21 @@
   --background: #fefff2;
   --black: #333;
   --white: #fff;
-  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  --box-shadow: 2px 2px 18px rgba(14 52 54 / 15%);
+  --shadow: rgba(0, 0, 0, 0.4);
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins';
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+  list-style: none;
+  text-decoration: none;
 }
 
-h1 {
-  font-size: 50px;
-  line-height: 64px;
-  color: var(--secondary);
-}
-
-p {
-  font-size: 16px;
-  color: var(--white);
-  margin: 15px 0 20px 0;
-}
-
-body {
-  width: 100%;
-  background: var(--background);
-}
 
 /* Header Start */
 header {
@@ -73,21 +62,10 @@ header img .logo {
   transition: 0.3 ease;
 }
 
-/* #navbar li a:hover, 
-#navbar li a.active{
-	color: #E3E6F3;
+#navbar li a:hover{
+  color: var(--background);
+  transition: .5s ease;
 }
-
-#navbar li a.active::after,
-#navbar li a:hover::after{
-  content: "";
-  width: 30%;
-  height: 2px;
-  background: #E3E6F3;
-  position: absolute;
-  bottom: -4px;
-  left: 20px;
-} */
 
 #mobile {
   display: none;
@@ -123,6 +101,11 @@ header img .logo {
     margin-bottom: 25px;
   }
 
+  #navbar li a:hover{
+    color: var(--background);
+    transition: .5s ease;
+  }
+
   #mobile {
     display: flex;
     align-items: center;
@@ -131,7 +114,12 @@ header img .logo {
   #mobile i {
     color: var(--secondary);
     font-size: 24px;
-    padding-left: 20px;
+    padding-left: 15px;
+  }
+
+  #mobile i:hover{
+    color: var(--background);
+    transition: .5s ease;
   }
 
   #close {
@@ -146,11 +134,357 @@ header img .logo {
     display: none;
   }
 }
-
 /* End Navbar */
 
 
+/* Start Home */
 
+/* For Image SlideShow */
+.slide-main{
+	position: relative;
+	width: 100%;
+	background: #2c3e50; 
+}
+.wrapper-main{
+	height: 735px;
+	display: none;
+	overflow: hidden;
+}
+
+/* Shadow background Image */
+.wrapper-main::before{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--shadow);
+  z-index: 1;
+}
+
+/* Button Next And Prev */
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: var(--white);
+	transition: 0.1s;
+	user-select: none;
+  z-index: 2;
+}
+.prev:hover, .next:hover{
+	color: var(--secondary); 
+}
+.next{
+	right: 0;
+}
+
+/* Dots for Image */
+.dots-main{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dots{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 10px solid var(--white);
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+/* javascript dots */
+.active, .dot:hover{
+	border-color: var(--secondary);
+}
+
+/* Text in SlideShow Image */
+.text-main{
+	position: absolute;
+	color: var(--white);
+	letter-spacing: 2px;
+	line-height: 25px;
+	top: 50%;
+	left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+/* Animasi Text */
+@-webkit-keyframes posi {
+  from {top: 35%;}
+  to {top: 50%;}
+}
+@keyframes posi {
+  from {top: 35%;}
+  to {top: 50%;}
+}
+
+/* Title Text in Slideshow */
+.text-main h1{
+	color: var(--secondary); /* blue */
+	font-size: 50px;
+	margin-bottom: 20px;
+  font-family: 'Poppins';
+}
+
+/* Paragraph Text */
+.text-main p{
+	font-weight: bold;
+	font-size: 20px;
+  font-family: 'Poppins';
+}
+
+/* Buttons */
+.text-main a.buttons{
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: var(--black);
+  font-size: 14px;
+  font-family: 'Poppins';
+  font-weight: bold;
+  background: var(--white);
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+.text-main a.buttons:hover{
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+
+/* Setting Image */
+.wrapper-main img{
+	transform: scale(1.3, 1.3);
+  background-color: var(--shadow);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+  	animation-duration: 40s;
+}
+/* Animation Image */
+@-webkit-keyframes zoomin {
+  from {transform: scale(1);}
+  to {transform: scale(1.3);}
+} 
+@keyframes zoomin {
+  from {transform: scale(1);}
+  to {transform: scale(1.3);}
+}
+
+@media screen and (max-width: 800px){
+	.wrapper-main{
+		height: 500px;
+	}
+	.text-main{
+		letter-spacing: 2px;
+		line-height: 25px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-animation-name: posi2;
+		-webkit-animation-duration: 2s;
+		animation-name: posi2;
+		animation-duration: 2s;
+	}
+
+	@-webkit-keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	@keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	.text-main h1{
+		font-size: 40px;
+	}
+	.text-main p{
+		font-size: 13px;
+	}
+}
+/* End Image Slide */
+
+/* About Hotel */
+.about{
+  background: url(/images/Luxury\ Hotel.jpg) no-repeat left;
+  background-size: 55%;
+  background-color: var(--background);
+  overflow: hidden;
+  padding: 100px 10px;
+}
+
+.row-about{
+  width: 55%;
+  float: right;
+  background-color: var(--white);
+  border: 1.5px solid var(--shadow);
+  border-radius: 40px 0 40px 0;
+  padding: 130px;
+  box-shadow: 10px 10px 8px rgba(0,0,0,0.3);
+}
+
+.row-about h1{
+  margin-bottom: 30px;
+  font-size: 35px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--secondary);
+}
+
+.row-about h2{
+  color: var(--primary);
+}
+
+.text-about{
+  font-size: 16px;
+  color: var(--primary);
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width:1200px){
+  .row-about{
+      padding: 80px;
+  }
+}
+@media screen and (max-width:1000px){
+  .about{
+      background-size: 100%;
+      padding: 100px 40px;
+  }
+  .row-about{
+      width: 100%;
+  }
+}
+
+@media screen and (max-width:600px){
+  .about{
+      padding: 0;
+  }
+  .row-about{
+      padding: 60px;
+  }
+}
+/* End About Hotel */
+
+
+/* Start Recomendation */
+.recomen{
+  max-width: 1068px;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--white);
+  border-radius: 2rem;
+  margin-bottom: 20px;
+}
+
+.head-recomen{
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+/* .head-recomen span{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary);
+} */
+
+.head-recomen h2{
+  font-size: 27px;
+  color: var(--secondary);
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.head-recomen p{
+  font-size: 16px;
+}
+
+.box-recomen{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  gap: 3rem;
+  padding: 0 50px;
+  max-width: 1068px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-recomen .box{
+  background-color: var(--background);
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.box-recomen .box:hover{
+  transform: translateY(-10px);
+  transition: 0.5s ease-out;
+}
+
+.box-recomen .box img{
+  width: 100%;
+  border-radius: 1rem;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.box-recomen .box h3{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.price{
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.price span{
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+a.book, a.view{
+  display: inline-block;
+	margin-top: 1rem;
+	background: var(--background);
+	color: var(--primary);
+	text-decoration: none;
+	padding: .4rem 1rem;
+	border: .2rem solid var(--primary);
+  border-radius: 10px;
+	cursor: pointer;
+	font-size: 15px;
+}
+a.book:hover, a.view:hover{
+  color: var(--secondary);
+  background: var(--primary);
+  transition: .5s;
+}
+
+/* End Recomendation */
+
+/* End Home */
 
 /* Start Footer */
 footer {
@@ -227,7 +561,6 @@ footer {
 .footer-col .social-links a:hover {
   transform: translateY(-3px) translateX(-5px);
 }
-/* End Footer */
 
 @media (max-width: 799px) {
   .contact h1 {
@@ -246,6 +579,12 @@ footer {
     width: 100%;
   }
 }
+/* End Footer */
+
+
+
+
+
 
 /* @media (max-width:1690px) {
   footer{
