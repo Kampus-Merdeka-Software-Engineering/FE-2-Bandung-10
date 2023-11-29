@@ -219,6 +219,10 @@ header img .logo {
   	animation-duration: 2s;
 	z-index: 1;
 }
+
+.text-main p{
+  line-height: 30px;
+}
 /* Animasi Text */
 @-webkit-keyframes posi {
   from {top: 35%;}
@@ -340,7 +344,7 @@ header img .logo {
   margin-bottom: 30px;
   font-size: 35px;
   text-align: center;
-  font-weight: 900;
+  font-weight: 600;
   color: var(--secondary);
 }
 
@@ -448,7 +452,7 @@ header img .logo {
 .box-recomen .box h3{
   font-size: 20px;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--secondary);
   margin-bottom: 10px;
   margin-top: 5px;
 }
@@ -485,9 +489,24 @@ a.book:hover, a.view:hover{
 /* End Recomendation */
 
 /* Start Review */
-::selection{
-  background: rgba(23,162,184,0.3);
+.review-main{
+  background-color: var(--background);
+  margin-bottom: 20px;
 }
+
+.head-review{
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.head-review h2{
+  font-size: 27px;
+  color: var(--secondary);
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
 .wrapper{
   max-width: 1200px;
   margin: auto;
@@ -498,7 +517,7 @@ a.book:hover, a.view:hover{
   justify-content: space-between;
 }
 .wrapper .box{
-  background: #fff;
+  background: var(--white);
   width: calc(33% - 10px);
   padding: 25px;
   border-radius: 3px;
@@ -506,7 +525,7 @@ a.book:hover, a.view:hover{
 }
 .wrapper .box i.quote{
   font-size: 20px;
-  color: #17a2b8;
+  color: var(--secondary);
 }
 .wrapper .box .content{
   display: flex;
@@ -522,19 +541,19 @@ a.book:hover, a.view:hover{
 .box .info .job{
   font-size: 16px;
   font-weight: 500;
-  color: #17a2b8;
+  color: var(--secondary);
 }
 .box .info .stars{
   margin-top: 2px;
 }
 .box .info .stars i{
-  color: #17a2b8;
+  color: var(--secondary);
 }
 .box .content .image{
   height: 75px;
   width: 75px;
   padding: 3px;
-  background: #17a2b8;
+  background: var(--secondary);
   border-radius: 50%;
 }
 .content .image img{
@@ -542,10 +561,10 @@ a.book:hover, a.view:hover{
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
 }
 .box:hover .content .image img{
-  border-color: #fff;
+  border-color: var(--white);
 }
 @media (max-width: 1045px) {
   .wrapper .box{
