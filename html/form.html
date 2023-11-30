@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Luxury Hotel</title>
     <link rel="stylesheet" href="/css/form.css">
-	<link rel="icon" href="/images/logo.png" type="luxury-hotel-logo">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
 </head>
@@ -17,7 +19,7 @@
 
     <div>
       <ul id="navbar">
-          <li><a class="active" href="/index.html">Home</a></li>
+          <li><a class="active" href="home.html">Home</a></li>
           <li><a href="rooms.html">Rooms</a></li>
           <li><a href="facilities.html">Facilities</a></li>
           <li><a href="faq.html">Faq</a></li>
@@ -56,7 +58,17 @@
 
                     <div class="input-field">
                         <label>Rooms</label>
-                        <input type="dropdown" placeholder="Choose your room" required>
+                        <div class="select">
+                            <select name="format" id="format">
+                               <option selected disabled>Choose</option>
+                               <option value="Deluxe Basic">Deluxe Basic</option>
+                               <option value="Deluxe Common">Deluxe Common</option>
+                               <option value="Deluxe Rare">Deluxe Rare</option>
+                               <option value="Executive Special">Executive Special</option>
+                               <option value="Executive Epic">Executive Epic</option>
+                               <option value="Executive Legendary">Executive Legendary</option>
+                            </select>
+                         </div>
                     </div>
 
                     <div class="input-field">
@@ -70,26 +82,40 @@
                     </div>
                         
                     <div class="input-field">
-                        <label>Addults</label>
-                        <input type="number" placeholder="Enter your occupation" required>
+                        <label>Adults</label>
+                        <div class="select">
+                            <select name="format" id="format">
+                               <option selected disabled>Choose</option>
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                               <option value="4">4</option>
+                               <option value="5">5</option>
+                            </select>
+                         </div>
                     </div>
 
                     <div class="input-field">
                         <label>Childs</label>
-                        <input type="number" placeholder="Enter childs" required>
+                        <div class="select">
+                            <select name="format" id="format">
+                               <option selected disabled>Choose</option>
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                               <option value="4">4</option>
+                               <option value="5">5</option>
+                            </select>
+                         </div>
                     </div>
                 </div>
 
                     <div class="buttons">
                         <div class="bookBtn">
                             <span class="btnText">Booking</span>
-                            <box-icon name='reset'></box-icon>
+                            <box-icon name='reset'><a href="/html/suskses.html"></a></box-icon>
                         </div>
 
-                        <div class="resetBtn">
-                            <span class="btnText">Reset</span>
-                            <box-icon name='reset'></box-icon>
-                        </div>
                     </div>
                 </div>
             </div>
