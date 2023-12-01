@@ -1,18 +1,18 @@
 //Navbar Js
-const bar = document.getElementById('bar');
-const close = document.getElementById('close');
-const nav = document.getElementById('navbar');
-const BASE_URL = ''
+const bar = document.getElementById("bar");
+const close = document.getElementById("close");
+const nav = document.getElementById("navbar");
+const BASE_URL = "";
 
 if (bar) {
-        bar.addEventListener('click', () => {
-            nav.classList.add('active');
-        });
+  bar.addEventListener("click", () => {
+    nav.classList.add("active");
+  });
 }
 
 if (close) {
-  close.addEventListener('click', () => {
-      nav.classList.remove('active');
+  close.addEventListener("click", () => {
+    nav.classList.remove("active");
   });
 }
 //End Navbar
@@ -24,7 +24,7 @@ if (close) {
 // bookBtn.addEventListener("click", ()=> {
 //     allinput.forEach(input => {
 //         if(input.value != ""){
-//             document.getElementById("myModal").style.display = "flex"; 
+//             document.getElementById("myModal").style.display = "flex";
 //         }else{
 //             form.classList.remove("secActive");
 //         }
@@ -33,7 +33,6 @@ if (close) {
 
 // bookBtn.addEventListener("click", () => form.classList.remove("secActive"));
 // Function hamburger button
-
 
 document.getElementById("form").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -57,8 +56,8 @@ document.getElementById("form").addEventListener("submit", (event) => {
     checkin !== "" &&
     checkout !== "" &&
     adult !== "" &&
-    child !== "" 
-    // address !== "" 
+    child !== ""
+    // address !== ""
   ) {
     // Show modal
     document.getElementById("myModal").style.display = "flex";
