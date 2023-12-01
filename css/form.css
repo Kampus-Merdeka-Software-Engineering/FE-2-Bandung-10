@@ -11,7 +11,7 @@
   --shadow: rgba(0, 0, 0, 0.4);
 }
 
-* {
+*, *::before, *::after{
   margin: 0;
   padding: 0;
   font-family: 'Poppins';
@@ -222,8 +222,7 @@ form .fields .input-field{
   padding: 0 15px;
   height: 42px;
   margin: 8px 0;
-  width: 200px;
-
+  width: 200px;
 }
 
 .input-field input:is(:focus, :valid){
@@ -238,16 +237,62 @@ form .fields .input-field{
   color: #333;
 }
 
-.container form button, .bookBtn, .resetBtn{
-  display:flex;
+select {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  outline:0;
+  box-shadow:none;
+  border:0!important;
+  background: #fff;
+  background-image: none;
+  flex: 1;
+  padding: 0 .5em;
+  color: #7f7f7f;
+  cursor:pointer;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 25vh;
+  height: 2.5em;
+  line-height: 3;
+  background: #B9A13F;
+  overflow: hidden;
+  border-radius: .25em;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 .5em;
+  /* background: #B9A13F; */
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+.select:hover::after {
+  color: #000;
+}
+
+.buttons .btnText{
   align-items: center;
+  text-align: center;
   justify-self: center;
   height: 42px;
   max-width: 150px;
   width: 100%;
+  font-weight: 600;
   border: none;
   outline: none;
-  color: #0c0c0c;
+  color: var(--primary);
   border-radius: 5px;
   margin: 25px 0;
   margin-right: 25px;
@@ -257,20 +302,223 @@ form .fields .input-field{
   border: 1px solid #aaa;
 }
 
-form button:hover{
-  background-color: #265df2;
+.buttons .btnText:hover{
+  background-color: var(--primary);
+  color: var(--secondary);
 }
 
-form button {
-  margin: 0 7px;
-}
 
-form .buttons{
-  display: flex;
+/* Start Pop up */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
   align-items: center;
 }
 
-form .buttons button , .btnText{
-  margin-right: 14px;
-  margin-left: 14px;
+.modal-content {
+  background-color: #fff;
+  color: #b2533e;
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  max-height: 520px;
+  height: 100%;
 }
+
+.img-bill {
+  height: 75px;
+  margin-top: 10px;
+}
+
+.img-bill img {
+  height: 100%;
+}
+
+.subtotal-bill {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  margin: 0;
+  text-align: left;
+  border: 0.5px solid gray;
+}
+
+.subtotal-bill h3 {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.hr-modal {
+  background-color: #b2533e;
+  max-width: 450px;
+  height: 4px;
+  border-radius: 10px;
+  margin-inline: auto;
+}
+
+.modal-content h1 {
+  font-size: 16px;
+}
+
+.modal-content p {
+  max-width: 550px;
+  width: 100%;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal-title {
+  display: flex;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-block: 10px;
+}
+
+.list-order {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  height: 150px;
+  margin-block: 20px;
+}
+
+.list-detail {
+  display: flex;
+  height: 30px;
+  width: 480px;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-detail .qty {
+  width: 80px;
+}
+
+.list-detail .menu-bill {
+  text-align: left;
+}
+
+.list-detail .price {
+  text-align: right;
+  width: 200px;
+}
+
+.list-detail p {
+  margin: 0;
+}
+
+.list-detail hr {
+  height: 20px;
+}
+
+.button-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.button-modal button:hover {
+  border: 3px solid black;
+  color: black;
+  background-color: transparent;
+}
+
+.button-modal a {
+  text-decoration: none;
+}
+
+.close {
+  background-color: #b3b4b4;
+  font-family: "Poppins", sans-serif;
+  font-weight: 10px;
+  color: black;
+  padding: 10px;
+  border: 3px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.close-btn {
+  background-color: #186f65;
+  font-family: "Poppins", sans-serif;
+  font-weight: 10px;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+#homeBtn {
+  background-color: #186f65;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.modal2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #b2533e;
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  max-height: 230px;
+  height: 100%;
+}
+
+.modal-content2 p {
+  color: black;
+  font-size: 21px;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+
+.modal-content2 button:hover {
+  border: 3px solid #186f65;
+  color: #186f65;
+  background-color: transparent;
+}
+
+.modal-content2 a {
+  text-decoration: none;
+}
+/* End of Order Confirmation */

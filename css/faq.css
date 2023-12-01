@@ -137,10 +137,6 @@ header img .logo {
 /* End Navbar */
 
 /* Start FAQ */
-::selection{
-  background: #7d2ae8;
-  color: #fff;
-}
 .accordion{
   display: flex;
   /* max-width: 1010px; */
@@ -151,8 +147,8 @@ header img .logo {
   padding: 45px 90px 45px 60px;
 }
 .accordion .image-box{
-  height: 360px;
-  width: 300px;
+  height: 500px;
+  width: 500px;
 }
 .accordion .image-box img{
   height: 100%;
@@ -174,9 +170,9 @@ header img .logo {
   height: 263px;
   overflow-y: auto;
 }
-.faq-text::-webkit-scrollbar{
-  display: none;
-}
+/* .faq-text::-webkit-scrollbar{
+  display: inline-block;
+} */
 .accordion .accordion-text li{
   list-style: none;
   cursor: pointer;
@@ -228,16 +224,13 @@ header img .logo {
 }
 
 @media (max-width: 994px) {
-  body{
-    padding: 40px 20px;
-  }
   .accordion{
     max-width: 100%;
     padding: 45px 60px 45px 60px;
   }
   .accordion .image-box{
-    height: 360px;
-    width: 220px;
+    height: 500px;
+    width: 500px;
   }
   .accordion .accordion-text{
     width: 63%;
@@ -248,9 +241,9 @@ header img .logo {
     flex-direction: column;
   }
   .accordion .image-box{
-    height: 360px;
-    width: 300px;
-    background: #b9a13f;
+    height: 500px;
+    width: 500px;
+    background: var(--primary);
     width: 100%;
     border-radius: 25px;
     padding: 30px;
@@ -265,7 +258,7 @@ header img .logo {
     padding: 25px;
   }
   .accordion-text li p{
-    width: 98%;
+    width: 100%;
   }
 }
 /* End FAQ */

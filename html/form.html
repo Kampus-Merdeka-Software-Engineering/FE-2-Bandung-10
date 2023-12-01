@@ -32,69 +32,296 @@
     </div>
 </header>
 <!-- End Header -->
-    <div class="container">
+    <!-- <div class="container">
         <h1>Booking Rooms</h1>
 
-        <form action="#">
+        <form action="#myModal">
             <div class="form first">
                     
                 <div class="fields">
                     <div class="input-field">
                         <label>Full Name</label>
-                        <input type="text" placeholder="Rizki Arya" required>
+                        <input type="text" id="fullname" placeholder="Rizki Arya" required>
                     </div>
 
                     <div class="input-field">
                         <label>Email</label>
-                        <input type="text" placeholder="abc123@gmail.com" required>
+                        <input type="text" id="email" placeholder="abc123@gmail.com" required>
                     </div>
 
                     <div class="input-field">
                         <label>Phone</label>
-                        <input type="number" placeholder="0857********" required>
+                        <input type="number" id="phone" placeholder="0857****" required>
                     </div>
 
                     <div class="input-field">
                         <label>Rooms</label>
-                        <input type="dropdown" placeholder="Choose your Rooms" required>
+                        <div class="select">
+                            <select id="rooms">
+                               <option selected disabled>Choose your Rooms</option>
+                               <option value="basic">Deluxe Basic</option>
+                               <option value="common">Deluxe Common</option>
+                               <option value="rare">Deluxe Rare</option>
+                               <option value="spesial">Executive Spesial</option>
+                               <option value="epic">Executive Epic</option>
+                               <option value="legendary">Executive Legendary</option>
+                            </select>
+                         </div>
                     </div>
 
                     <div class="input-field">
                         <label>Check In</label>
-                        <input type="date" placeholder="mm/dd/yyyy" required height="30px">
+                        <input type="date" id="checkin" placeholder="mm/dd/yyyy" required height="30px">
                     </div>
 
                     <div class="input-field">
                         <label>Check Out</label>
-                        <input type="date" placeholder="mm/dd/yyyy" required>
+                        <input type="date" id="checkout" placeholder="mm/dd/yyyy" required>
                     </div>
                         
                     <div class="input-field">
-                        <label>Addults</label>
-                        <input type="number" placeholder="Enter your Occupation" required>
+                        <label>Adults</label>
+                        <div class="select">
+                            <select id="adults">
+                               <option selected disabled>Occupation</option>
+                               <option value="One">One</option>
+                               <option value="Two">Two</option>
+                               <option value="Three">Three</option>
+                               <option value="Four">Four</option>
+                               <option value="Five">Five</option>
+                            </select>
+                         </div>
                     </div>
 
                     <div class="input-field">
                         <label>Childs</label>
-                        <input type="number" placeholder="Enter Childs" required>
+                        <div class="select">
+                            <select id="childs">
+                               <option selected disabled>Childs</option>
+                               <option value="One">One</option>
+                               <option value="Two">Two</option>
+                               <option value="Three">Three</option>
+                               <option value="Four">Four</option>
+                               <option value="Five">Five</option>
+                            </select>
+                         </div>
                     </div>
-                </div>
+                
 
                     <div class="buttons">
-                        <div class="bookBtn">
-                            <span class="btnText">Booking Now</span>
-                            <box-icon name='reset'></box-icon>
-                        </div>
-
-                        <!-- <div class="resetBtn">
-                            <span class="btnText">Reset</span>
-                            <box-icon name='reset'></box-icon>
-                        </div> -->
+                        <button type="submit" class="btnText" id="konfirmasiBtn" value="submit">
+                            Booking Now
+                          </button>
                     </div>
                 </div>
             </div>
         </form>
-    </div>
-    <script src="./js/form.js"></script>
+    </div> -->
+        <!-- Shipping Information -->
+        <!-- <div class="row-content">  -->
+          <div class="container"> 
+            <h1>Booking Rooms</h1>
+            <form id="form">
+              <div class="fields">
+                <div class="input-field">
+                  <label>Fullname</label> <!-- Fullname -->
+                  <input
+                    id="fullname"
+                    type="text"
+                    placeholder="Rizki Arya"
+                    name="fullname"
+                    required
+                  />
+                </div>
+
+                <div class="input-field"> <!-- Email -->
+                  <label>Email</label>
+                  <input 
+                  id="email" 
+                  type="email" 
+                  placeholder="abc123@gmail.com"
+                  name="email"
+                  required 
+                   />
+                </div>
+
+                 <div class="input-field"> <!-- No Telpon -->
+                  <label>Phone</label>
+                  <input
+                    id="phone"
+                    type="number"
+                    maxlength="13"
+                    placeholder="08577045****"
+                    name="phone"
+                    required
+                  />
+                </div>
+
+                      <div class="input-field">
+                        <label>Rooms</label>
+                        <div class="select" required>
+                            <select id="rooms" >
+                               <option selected disabled>Choose your Rooms</option>
+                               <option value="basic">Deluxe Basic</option>
+                               <option value="common">Deluxe Common</option>
+                               <option value="rare">Deluxe Rare</option>
+                               <option value="spesial">Executive Spesial</option>
+                               <option value="epic">Executive Epic</option>
+                               <option value="legendary">Executive Legendary</option>
+                            </select>
+                         </div>
+                      </div>
+
+                <div class="input-field">
+                  <label>Check In</label>
+                  <input 
+                  type="date" 
+                  id="checkin" 
+                  placeholder="mm/dd/yyyy" 
+                  required >
+                </div>
+
+                <div class="input-field">
+                    <label>Check Out</label>
+                    <input 
+                    type="date" 
+                    id="checkout" 
+                    placeholder="mm/dd/yyyy" 
+                    required>
+                </div>
+
+                <div class="input-field">
+                  <label>Adults</label>
+                  <div class="select">
+                      <select id="adult">
+                        <option selected disabled>Occupation</option>
+                        <option value="One">One</option>
+                        <option value="Two">Two</option>
+                        <option value="Three">Three</option>
+                        <option value="Four">Four</option>
+                        <option value="Five">Five</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="input-field">
+                    <label>Childs</label>
+                    <div class="select">
+                        <select id="child">
+                          <option selected disabled>Childs</option>
+                          <option value="One">One</option>
+                          <option value="Two">Two</option>
+                          <option value="Three">Three</option>
+                          <option value="Four">Four</option>
+                          <option value="Five">Five</option>
+                        </select>
+                    </div>
+                </div>
+
+              </div>
+                <div class="buttons">
+                  <button type="submit" class="btnText" id="konfirmasiBtn" value="submit">
+                    Konfirmasi Pesanan
+                  </button>
+                </div>
+
+            </form>
+
+            <!-- First Modal -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <div class="img-bill">
+                  <h3>Receipt</h3>
+                  <hr />
+                </div>
+                <div class="list-order">
+                  <div class="list-detail">
+                    <p class="menu-bill">Fullname :</p>
+                    <hr />
+                    
+                    <hr />
+                    <p class="price">Rizki Arya</p>
+                  </div>
+                  <hr />
+                  <div class="list-detail">
+                    <p class="menu-bill">Ayam Taliwang</p>
+                    <hr />
+                    <p class="qty">1</p>
+                    <hr />
+                    <p class="price">Rp 65.000</p>
+                  </div>
+                  <hr />
+                  <div class="list-detail">
+                    <p class="menu-bill">Ayam Taliwang</p>
+                    <hr />
+                    <p class="qty">1</p>
+                    <hr />
+                    <p class="price">Rp 65.000</p>
+                  </div>
+                  <hr />
+                  <div class="list-detail">
+                    <p class="menu-bill">Ayam Taliwang</p>
+                    <hr />
+                    <p class="qty">1</p>
+                    <hr />
+                    <p class="price">Rp 65.000</p>
+                  </div>
+                  <hr />
+                  <div class="list-detail">
+                    <p class="menu-bill">Ayam Taliwang</p>
+                    <hr />
+                    <p class="qty">1</p>
+                    <hr />
+                    <p class="price">Rp 65.000</p>
+                  </div>
+                  <hr />
+                  <div class="list-detail">
+                    <p class="menu-bill">Ayam Taliwang</p>
+                    <hr />
+                    <p class="qty">1</p>
+                    <hr />
+                    <p class="price">Rp 65.000</p>
+                  </div>
+                  <hr />
+                </div>
+                <!-- <div class="subtotal-bill">
+                  <div class="subtotal-left">
+                    <p>Subtotal</p>
+                    <p>Biaya Antar</p>
+                    <h3>Total</h3>
+                  </div>
+                  <div class="subtotal-right">
+                    <p>Rp.100.000</p>
+                    <p>Rp.5.000</p>
+                    <h3>Rp.105.000</h3>
+                  </div>
+                </div> -->
+                <div class="modal-title">
+                  <h1>Sudah yakin dengan pesanan Anda?</h1>
+                </div>
+                <div class="button-modal">
+                  <button class="close" id="closeModalBtn">Ubah pesanan</button>
+                  <button class="close-btn" id="nextModalBtn">
+                    Ya, Lanjutkan pesanan
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- End of First Modal  -->
+
+            <!-- Second Modal -->
+            <div id="myModal2" class="modal2">
+              <div class="modal-content2">
+                <h1>Terima kasih!</h1>
+                <p>Pesanan anda sedang diproses.</p>
+                <button class="close-btn" id="homeBtn">
+                  Kembali ke Beranda
+                </button>
+              </div>
+            </div>
+            <!-- End of Second Modal -->
+          </div>
+        <!-- </div> -->
+        <!-- End of Shipping Information -->
+    <script src="/js/form.js"></script>
 </body>
 </html>
