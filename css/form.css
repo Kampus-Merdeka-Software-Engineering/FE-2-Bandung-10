@@ -155,7 +155,7 @@ header img .logo {
 
 .container h1 {
   position: relative;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: #333;
 }
@@ -165,9 +165,9 @@ header img .logo {
   left: 0;
   bottom: -2px;
   height: 3px;
-  width: 27px;
+  width: 50px;
   border-radius: 8px;
-  background-color: #4070f4;
+  background-color: var(--row);
 }
 .container form {
   position: relative;
@@ -323,8 +323,8 @@ select::-ms-expand {
 }
 
 .modal-content {
-  background-color: #fff;
-  color: #b2533e;
+  background-color: var(--background);
+  color: var(--secondary);
   padding: 20px;
   font-size: 1.2rem;
   border-radius: 5px;
@@ -335,16 +335,16 @@ select::-ms-expand {
   height: 100%;
 }
 
-.img-bill {
+/* .img-bill {
   height: 75px;
   margin-top: 10px;
 }
 
 .img-bill img {
   height: 100%;
-}
+} */
 
-.subtotal-bill {
+/* .subtotal-bill {
   display: flex;
   justify-content: space-between;
   height: 100px;
@@ -356,25 +356,27 @@ select::-ms-expand {
 .subtotal-bill h3 {
   font-size: 18px;
   margin-top: 8px;
-}
+} */
 
-.hr-modal {
+/* .hr-modal {
   background-color: #b2533e;
   max-width: 450px;
   height: 4px;
   border-radius: 10px;
   margin-inline: auto;
-}
+} */
 
-.modal-content h1 {
-  font-size: 16px;
+.modal-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--secondary);
 }
 
 .modal-content p {
   max-width: 550px;
   width: 100%;
-  color: black;
-  font-size: 14px;
+  color: var(--black);
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -384,7 +386,8 @@ select::-ms-expand {
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-block: 10px;
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 
 .list-order {
@@ -398,15 +401,15 @@ select::-ms-expand {
 
 .list-detail {
   display: flex;
-  height: 30px;
+  height: 40px;
   width: 480px;
   justify-content: center;
   align-items: center;
 }
 
-.list-detail .qty {
+/* .list-detail .qty {
   width: 80px;
-}
+} */
 
 .list-detail .menu-bill {
   text-align: left;
@@ -421,9 +424,9 @@ select::-ms-expand {
   margin: 0;
 }
 
-.list-detail hr {
+/* .list-detail hr {
   height: 20px;
-}
+} */
 
 .button-modal {
   display: flex;
@@ -444,34 +447,33 @@ select::-ms-expand {
 
 .close {
   background-color: #b3b4b4;
-  font-family: "Poppins", sans-serif;
   font-weight: 10px;
-  color: black;
+  color: var(--black);
   padding: 10px;
   border: 3px solid transparent;
-  border-radius: 30px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
 .close-btn {
-  background-color: #186f65;
-  font-family: "Poppins", sans-serif;
-  font-weight: 10px;
-  color: white;
+  background-color: var(--primary);
+  font-weight: 500;
+  color: var(--secondary);
   padding: 10px;
   border: none;
-  border-radius: 30px;
+  border-radius: 20px;
   border: 3px solid transparent;
   cursor: pointer;
 }
 
 #homeBtn {
-  background-color: #186f65;
-  font-family: "Poppins", sans-serif;
-  color: white;
+  background-color: var(--primary);
+  color: var(--secondary);
   padding: 15px;
   border: none;
-  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 20px;
   margin-top: 20px;
 }
 
@@ -492,10 +494,8 @@ select::-ms-expand {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
-  color: #b2533e;
-  padding: 20px;
-  font-size: 1.2rem;
+  background-color: var(--background);
+  padding: 30px;
   border-radius: 5px;
   text-align: center;
   max-width: 550px;
@@ -504,17 +504,23 @@ select::-ms-expand {
   height: 100%;
 }
 
+.modal-content2 h2{
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
 .modal-content2 p {
   color: black;
-  font-size: 21px;
-  max-width: 400px;
+  font-size: 18px;
+  max-width: 600px;
   width: 100%;
   margin: auto;
 }
 
 .modal-content2 button:hover {
-  border: 3px solid #186f65;
-  color: #186f65;
+  border: 3px solid var(--secondary);
+  color: var(--primary);
   background-color: transparent;
 }
 
