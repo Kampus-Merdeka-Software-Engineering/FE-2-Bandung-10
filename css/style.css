@@ -323,7 +323,7 @@ header img .logo {
 
 /* About Hotel */
 .about{
-  background: url(/images/Luxury\ Hotel.jpg) no-repeat left;
+  background: url(images/Luxury\ Hotel.jpg) no-repeat left;
   background-size: 55%;
   background-color: var(--background);
   overflow: hidden;
