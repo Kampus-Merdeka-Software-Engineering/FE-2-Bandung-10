@@ -336,7 +336,7 @@ header img .logo {
   background-color: var(--white);
   border: 1.5px solid var(--shadow);
   border-radius: 40px 0 40px 0;
-  padding: 130px;
+  padding: 100px;
   box-shadow: 10px 10px 8px rgba(0,0,0,0.3);
 }
 

@@ -219,6 +219,10 @@ header img .logo {
   transition: opacity 1s 1s;
 }
 
+.card__data p{
+  font-size: 16px;
+}
+
 .card__description {
   display: block;
   font-size: var(--small-font-size);
