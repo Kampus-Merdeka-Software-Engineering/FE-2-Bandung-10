@@ -91,8 +91,8 @@
 
           <div class="input-field">
             <label>Rooms</label>
-            <div class="select" required>
-              <select id="rooms">
+            <div class="select" >
+              <select id="rooms" name="rooms" required>
                 <option selected disabled>Choose your Rooms</option>
                 <option value="basic">Deluxe Basic</option>
                 <option value="common">Deluxe Common</option>
@@ -106,7 +106,12 @@
 
           <div class="input-field">
             <label>Check In</label>
-            <input type="date" id="checkin" placeholder="mm/dd/yyyy" required />
+            <input 
+            type="date" 
+            id="checkin" 
+            name="checkin" 
+            placeholder="mm/dd/yyyy" 
+            required />
           </div>
 
           <div class="input-field">
@@ -114,6 +119,7 @@
             <input
               type="date"
               id="checkout"
+              name="checkout"
               placeholder="mm/dd/yyyy"
               required
             />
@@ -121,31 +127,26 @@
 
           <div class="input-field">
             <label>Adults</label>
-            <div class="select">
-              <select id="adult">
-                <option selected disabled>Occupation</option>
-                <option value="One">One</option>
-                <option value="Two">Two</option>
-                <option value="Three">Three</option>
-                <option value="Four">Four</option>
-                <option value="Five">Five</option>
-              </select>
-            </div>
+            <input
+              type="number"
+              id="adults"
+              name="adults"
+              placeholder="Amount"
+              required
+            />
           </div>
           <div class="input-field">
             <label>Childs</label>
-            <div class="select">
-              <select id="child">
-                <option selected disabled>Childs</option>
-                <option value="One">One</option>
-                <option value="Two">Two</option>
-                <option value="Three">Three</option>
-                <option value="Four">Four</option>
-                <option value="Five">Five</option>
-              </select>
-            </div>
+            <input
+            type="number"
+            id="childs"
+            name="childs"
+            placeholder="Amount"
+            required
+            />
           </div>
         </div>
+
         <!-- Start Buttons to Reciept -->
         <div class="buttons">
           <button
@@ -154,7 +155,7 @@
             id="konfirmasiBtn"
             value="submit"
           >
-            Booking Confirmation 
+            Booking Room 
           </button>
         </div>
         <!-- End Buttons to Reciept -->

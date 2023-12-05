@@ -223,7 +223,7 @@ form .fields .input-field {
   padding: 0 15px;
   height: 42px;
   margin: 8px 0;
-    width: 200px;
+  width: 200px;
 }
 
 .input-field input:is(:focus, :valid) {

@@ -43,8 +43,8 @@ document.getElementById("form").addEventListener("submit", (event) => {
   const rooms = document.getElementById("rooms").value;
   const checkin = document.getElementById("checkin").value;
   const checkout = document.getElementById("checkout").value;
-  const adult = document.getElementById("adult").value;
-  const child = document.getElementById("child").value;
+  const adults = document.getElementById("adults").value;
+  const childs = document.getElementById("childs").value;
   // const address = document.getElementById("address").value;
 
   // Check if all fields are filled
@@ -55,8 +55,8 @@ document.getElementById("form").addEventListener("submit", (event) => {
     rooms !== "" &&
     checkin !== "" &&
     checkout !== "" &&
-    adult !== "" &&
-    child !== ""
+    adults !== "" &&
+    childs !== ""
     // address !== ""
   ) {
     // Show modal
