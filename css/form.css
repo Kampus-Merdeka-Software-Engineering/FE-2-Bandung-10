@@ -12,7 +12,6 @@
 }
 
 *,
-*::before,
 *::after {
   margin: 0;
   padding: 0;
@@ -261,11 +260,12 @@ select::-ms-expand {
 .select {
   position: relative;
   display: flex;
-  width: 25vh;
+  width: 24vh;
   height: 2.5em;
   line-height: 3;
   background: #b9a13f;
   overflow: hidden;
+  border: 1px solid #aaa;
   border-radius: 0.25em;
 }
 .select::after {
@@ -475,6 +475,7 @@ select::-ms-expand {
   font-weight: 500;
   border-radius: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .modal2 {
@@ -528,3 +529,32 @@ select::-ms-expand {
   text-decoration: none;
 }
 /* End of Order Confirmation */
+@media (max-width: 574px) {
+  .select{
+    width: 22vh;
+  }
+  .list-detail {
+    width: 350px;
+  }
+  .modal-content {
+  max-width: 400px;
+  width: 100%;
+  max-height: 520px;
+  height: 100%;
+  }
+
+  .modal-content2 {
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+  }
+
+  .modal-content2 h2 {
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--secondary);
+  }
+}
