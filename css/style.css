@@ -313,17 +313,19 @@ header img .logo {
 	}
 
 	.text-main h1{
-		font-size: 30px;
+		font-size: 28px;
+    font-weight: bold;
 	}
 	.text-main p{
-		font-size: 14px;
+		font-size: 16px;
+    font-weight: 400;
 	}
 }
 /* End Image Slide */
 
 /* About Hotel */
 .about{
-  background: url(images/luxuryHotel.jpg) no-repeat left;
+  background: url(/images/luxuryHotel.jpg) no-repeat left;
   background-size: 55%;
   background-color: var(--background);
   overflow: hidden;
@@ -377,7 +379,7 @@ header img .logo {
 
 @media screen and (max-width:600px){
   .about{
-      padding: 0;
+    padding: 10px;
   }
   .row-about{
       padding: 60px;
