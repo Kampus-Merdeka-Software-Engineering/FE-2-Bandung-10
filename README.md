@@ -1,4 +1,4 @@
-# LUXURY HOTEL  ![Alt Text](https://github.com/Kampus-Merdeka-Software-Engineering/FE-2-Bandung-10/blob/e34418ac8b0c37286df6b04c1cba1e935c831a45/images/logo.png)
+# LUXURY HOTEL  ![Alt Text]<img src="images/logo.png" class="logo" width="150" height="120">
 
 Selamat datang di repository hotel kami, di mana kami mengubah setiap penginapan menjadi pengalaman tak terlupakan. Kami berkomitmen untuk membuat setiap tamu merasa istimewa. Dengan desain yang elegan dan nuansa yang hangat, web kami adalah jendela virtual ke dunia kemewahan dan ketenangan. Selamat menikmati perjalanan Anda ke kenyamanan sejati!
 
