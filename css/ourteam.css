@@ -156,7 +156,7 @@ header img .logo {
 	align-items: center;
 	gap: 2rem;
 	text-align: center;
-	/* margin-top: 4rem; */
+	margin-top: 4rem;
 }
 .team-content img{
 	width: 50%;
@@ -219,8 +219,9 @@ header img .logo {
   .team-content {
     width: 80%;
     height: auto;
-    padding: 80px 1%;
-}
+    padding: 20px 1%;
+    margin-top: 0;
+  }
 }
 /* End Teams */
 

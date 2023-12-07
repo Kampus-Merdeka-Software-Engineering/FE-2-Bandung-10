@@ -28,17 +28,17 @@ Fitur website kami terdiri dari:
 Terdapat deskripsi pilihan kamar beserta price list-nya dilengkapi dengan fitur booking yang memudahkan customer dalam memesan kamar idamannya. 
 <!-- gambar rooms beserta bookingnya -->
 
-4. **Facilities** - Panduan visual menuju kemewahan dan kenyamanan penuh yang dirancang untuk memanjakan dan memenuhi kebutuhan tamu kami.
+3. **Facilities** - Panduan visual menuju kemewahan dan kenyamanan penuh yang dirancang untuk memanjakan dan memenuhi kebutuhan tamu kami.
 Informasi lengkap mengenai fasilitas eksklusif kami mulai detail lokasi, jam operasional, dan lain-lain.
 <!-- gambar fasilitas -->
 
-5. **FAQ** - Menyajikan informasi dengan cara yang mudah dipahami dan FAQ ini dirancang untuk menjawab segala kebutuhan informasi Anda. 
+4. **FAQ** - Menyajikan informasi dengan cara yang mudah dipahami dan FAQ ini dirancang untuk menjawab segala kebutuhan informasi Anda. 
 <!-- gambar faq -->
 
-6. **Our Team** - Informasi tentang tim pengembangan website Luxury Hotel.
+5. **Our Team** - Informasi tentang tim pengembangan website Luxury Hotel.
 <!-- gambar our team -->
 
-7. **Footer** - Mengarahkan Anda ke penemuan lebih lanjut tentang panduan pengguna dan kontak kami dirancang agar dapat diakses dengan mudah.
+6. **Footer** - Mengarahkan Anda ke penemuan lebih lanjut tentang panduan pengguna dan kontak kami dirancang agar dapat diakses dengan mudah.
 <!-- gambar footer -->
 
 ## Penerapan Teknologi yang digunakan
