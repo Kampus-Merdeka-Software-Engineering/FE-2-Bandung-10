@@ -1,4 +1,5 @@
-# LUXURY HOTEL  ![Alt Text]<img src="images/logo.png" class="logo" width="150" height="120">
+# LUXURY HOTEL  
+<img src="images/logo.png" class="logo" width="150" height="120">
 
 Selamat datang di repository hotel kami, di mana kami mengubah setiap penginapan menjadi pengalaman tak terlupakan. Kami berkomitmen untuk membuat setiap tamu merasa istimewa. Dengan desain yang elegan dan nuansa yang hangat, web kami adalah jendela virtual ke dunia kemewahan dan ketenangan. Selamat menikmati perjalanan Anda ke kenyamanan sejati!
 
