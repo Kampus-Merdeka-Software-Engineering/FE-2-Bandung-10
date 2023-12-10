@@ -192,10 +192,11 @@ document.addEventListener("DOMContentLoaded", function () {
   
       const selector = document.getElementById("rooms");
       rooms.forEach((room) => {
-        const optionRooms = document.createElement("option");
-        optionRooms.value = room.id;
-        optionRooms.textContent = room.name; // Assuming room.name is the property containing room names
-        selector.appendChild(optionRooms);
+        console.log(room, "Ini Room")
+        // const optionRooms = document.createElement("option");
+        // optionRooms.value = room.id;
+        // optionRooms.textContent = room.name; // Assuming room.name is the property containing room names
+        // selector.appendChild(optionRooms);
       });
     } catch (error) {
       console.error("Error", error);
