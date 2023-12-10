@@ -1,51 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Hotel</title>
-    <link rel="stylesheet" href="css/form.css" />
-    <link rel="icon" href="images/logo.png" type="luxury-hotel-logo" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    />
-  </head>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="icon" href="images/logo.png" type="luxury-hotel-logo">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    
 
-  <body>
-    <!-- Header Start -->
-    <header>
-      <a href="#"
-        ><img src="images/logo.png" class="logo" width="150" height="120"
-      /></a>
+</head>
+<body>
+<!-- Header Start -->
+<header>
+    <a href="#"><img src="images/logo.png" class="logo" width="150" height="120"></a>
 
-      <div>
-        <ul id="navbar">
+    <div>
+      <ul id="navbar">
           <li><a class="active" href="index.html">Home</a></li>
           <li><a href="rooms.html">Rooms</a></li>
           <li><a href="facilities.html">Facilities</a></li>
           <li><a href="faq.html">Faq</a></li>
-          <li><a href="ourteam.html">Our Teams</a></li>
-          <!-- <li>
-            <a id="login" href="login.html"><i class="fas fa-user"></i></a>
-          </li> -->
-          <a href="#" id="close"
-            ><i class="fas fa-times" style="color: #b9a13f"></i
-          ></a>
-        </ul>
-      </div>
-      <div id="mobile">
-        <!-- <a href="login.html"
-          ><i class="fas fa-user" style="color: #b9a13f"></i
-        ></a> -->
-        <i id="bar" class="fas fa-outdent" style="color: #b9a13f"></i>
-      </div>
-    </header>
-    <!-- End Header -->
+          <li><a href="ourteam.html">Our Team</a></li>
+          <li><a href="history.html"><i class="fas fa-book-open"></i></a></li>
+          <a href="#" id="close"><i class="fas fa-times" style="color: #B9A13F;"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+        <a href="history.html"><i class="fas fa-book-open"></i></a>
+        <i id="bar" class="fas fa-outdent" style="color: #B9A13F;"></i>
+    </div>
+</header>
+<!-- End Header -->
 
     <!-- Start Booking -->
     <div class="container">
@@ -55,213 +42,77 @@
           <div class="input-field">
             <label>Fullname</label>
             <!-- Fullname -->
-            <input
-              id="fullname"
-              type="text"
-              placeholder="Rizki Arya"
-              name="fullname"
-              required
-            />
+            <input  id="fullname"  type="text"  placeholder="Rizki Arya"  name="fullname"  />
           </div>
 
           <div class="input-field">
             <!-- Email -->
             <label>Email</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="abc123@gmail.com"
-              name="email"
-              required
-            />
+            <input  id="email"  type="email"  placeholder="abc123@gmail.com"  name="email"  />
           </div>
 
           <div class="input-field">
             <!-- No Telpon -->
             <label>Phone</label>
-            <input
-              id="phone"
-              type="number"
-              maxlength="13"
-              placeholder="08577045****"
-              name="phone"
-              required
-            />
+            <input  id="phone"  type="tel"  maxlength="13"  placeholder="08577045****"  name="phone"  />
           </div>
 
           <div class="input-field">
-            <label>Rooms</label>
+            <label for="rooms">Rooms</label>
             <div class="select" >
-              <select id="rooms" name="rooms" required>
-                <option selected disabled>Choose your Rooms</option>
-                <option value="basic">Deluxe Basic</option>
+              <select id="rooms" name="rooms_id" >
+                <option selected disabled>Choose your Rooms<option>
+                <!-- <option value="basic">Deluxe Basic</option>
                 <option value="common">Deluxe Common</option>
                 <option value="rare">Deluxe Rare</option>
                 <option value="spesial">Executive Spesial</option>
                 <option value="epic">Executive Epic</option>
-                <option value="legendary">Executive Legendary</option>
+                <option value="legendary">Executive Legendary</option> -->
               </select>
             </div>
           </div>
 
+          <section>
+            <label for="rooms"></label>
+            <select id="rooms">
+              <option value="">Select one catalog</option>
+            </select>
+            <!-- nanti kita bisa milih catalognya disini -->
+          </section>
+
           <div class="input-field">
             <label>Check In</label>
-            <input 
-            type="date" 
-            id="checkin" 
-            name="checkin" 
-            placeholder="mm/dd/yyyy" 
-            required />
+            <input type="date" id="checkin" name="check_in" placeholder="mm/dd/yyyy"  />
           </div>
 
           <div class="input-field">
             <label>Check Out</label>
-            <input
-              type="date"
-              id="checkout"
-              name="checkout"
-              placeholder="mm/dd/yyyy"
-              required
-            />
+            <input  type="date"  id="checkout"  name="check_out"  placeholder="mm/dd/yyyy"  />
           </div>
 
           <div class="input-field">
             <label>Adults</label>
-            <input
-              type="number"
-              id="adults"
-              name="adults"
-              placeholder="Enter number of adults"
-              required
-            />
+            <input type="number" id="adults" name="adults_amount" placeholder="Enter number of adults" />
           </div>
+
           <div class="input-field">
             <label>Childs</label>
-            <input
-            type="number"
-            id="childs"
-            name="childs"
-            placeholder="Enter number of childs"
-            required
-            />
+            <input type="number" id="childs" name="childs_amount" placeholder="Enter number of childs" />
           </div>
         </div>
 
         <!-- Start Buttons to Reciept -->
         <div class="buttons">
-          <button
-            type="submit"
-            class="btnText"
-            id="konfirmasiBtn"
-            value="submit"
-          >
+          <button type="submit" onclick="sendBooking()" class="btnText" id="konfirmasiBtn" value="submit">
             Booking Room 
           </button>
         </div>
         <!-- End Buttons to Reciept -->
       </form>
-
-      <!-- Start Receipt -->
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <div class="img-bill">
-            <h2>Receipt</h2>
-            <hr />
-          </div>
-          <div class="list-order">
-            <div class="list-detail">
-              <p class="menu-bill">Fullname :</p>
-              <!-- <hr />
-              <p class="qty">:</p>
-              <hr /> -->
-              <p class="price">Rizki Arya</p>
-            </div>
-            <hr />
-            <div class="list-detail">
-              <p class="menu-bill">Email  :</p>
-              <!-- <hr />
-              <p class="qty">:</p>
-              <hr /> -->
-              <p class="price">abc123@gmail.com</p>
-            </div>
-            <hr />
-            <div class="list-detail">
-              <p class="menu-bill">Phone  :</p>
-              <!-- <hr />
-              <p class="qty">:</p>
-              <hr /> -->
-              <p class="price">123456789000</p>
-            </div>
-            <hr />
-            <div class="list-detail">
-              <p class="menu-bill">Rooms  :</p>
-              <!-- <hr />
-              <p class="qty">:</p>
-              <hr /> -->
-              <p class="price">Executive Epic</p>
-            </div>
-            <hr />
-            <div class="list-detail">
-              <p class="menu-bill">Check In :</p>
-              <!-- <hr />
-              <p class="qty">:</p>
-              <hr /> -->
-              <p class="price">12-02-2023</p>
-            </div>
-            <hr />
-            <div class="list-detail">
-              <p class="menu-bill">Check Out  :</p>
-              <!-- <hr />
-              <p class="qty">:</p>
-              <hr /> -->
-              <p class="price">12-03-2023</p>
-            </div>
-            <hr />
-            <div class="list-detail">
-              <p class="menu-bill">Adults :</p>
-              <!-- <hr />
-              <p class="qty">:</p>
-              <hr /> -->
-              <p class="price">Two</p>
-            </div>
-            <hr />
-            <div class="list-detail">
-              <p class="menu-bill">Childs :</p>
-              <!-- <hr />
-              <p class="qty">:</p>
-              <hr /> -->
-              <p class="price">One</p>
-            </div>
-            <hr />
-          </div>
-
-          <!-- Start Validation -->
-          <div class="modal-title">
-            <h2>Are you sure about your room booking?</h2>
-          </div>
-          <div class="button-modal">
-            <button class="close" id="closeModalBtn">Modify Selection</button>
-            <button class="close-btn" id="nextModalBtn">
-              Booking Confirmation
-            </button>
-          </div>
-          <!-- End Validation -->
-        </div>
-      </div>
-      <!-- End Receipt -->
-
-      <!-- Start Back to Home -->
-      <div id="myModal2" class="modal2">
-        <div class="modal-content2">
-          <h2>Thank you for booking the rooms.</h2>
-          <br>
-          <p>Your order is being processed.</p>
-          <button class="close-btn" id="homeBtn">Back to Homepage</button>
-        </div>
-      </div>
-      <!-- End Back to Home -->
-    </div>
     
+    <!-- Link Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/form.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>

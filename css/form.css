@@ -237,6 +237,13 @@ form .fields .input-field {
   color: #333;
 }
 
+.error-message{
+  color: red; /* Warna teks pesan kesalahan */
+  font-size: 0.8em; /* Ukuran teks pesan kesalahan */
+  display: block; /* Agar pesan kesalahan ditampilkan dalam baris terpisah */
+  margin-top: 5px; /* Spasi di atas pesan kesalahan */
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
