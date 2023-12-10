@@ -75,44 +75,83 @@
 // //       getForm.appendChild(tr);
 // //   });
 // // }
+
+// async function fetchBooking() {
+  //   try {
+    //     const response = await fetch(`${API_URL}/form`);
+    //     const booking = await response.json();
+    //     // console.log(booking.data,"ini booking")
+    //     const bookingContainer = document.getElementById("getForm");
+    //     bookingContainer.innerHTML = `
+    //       <li class="th">${book.fullname}</li>
+    //       <li class="th">${book.email}</li>
+    //       <li class="th">${book.phone}</li>
+    //       <li class="th">${book.rooms_rooms}</li>
+    //       <li class="th">${book.check_in}</li>
+    //       <li class="th">${book.check_out}</li>
+    //       <li class="th">${book.adults_amount}</li>
+    //       <li class="th">${book.childs_amount}</li>;
+    //     `;
+    //     booking.data.forEach((book) => {
+      //       const newBookingList = document.createElement("li");
+      //       newBookingList.textContent = `${book.fullname}: ${book.email}: ${book.phone}: ${book.rooms_rooms}: ${book.check_in}: ${book.check_out}: ${book.adults_amount}: ${book.childs_amount}`;
+      //       bookingContainer.appendChild(newBookingList);
+      //     })
+      //   } catch (err) {
+        //     console.error(err);
+        //   }
+        // }
+        // fetchBooking();
+        
+        
+        // async function setupRoomsPage() {
+          //   try {
+            //     const response = await fetch(`${API_URL}/rooms`);
+            //     const roomsData = await response.json();
+            //     // console.log(roomsData.data, "Rooms")
+            
+            //     const selector = document.getElementById("rooms");
+            //     roomsData.data.forEach((room) => {
+              //       const optionRooms = document.createElement("option");
+              //       optionRooms.value = room.id;
+              //       optionRooms.textContent = room.rooms; // Assuming room.name is the property containing room names
+              //       selector.appendChild(optionRooms);
+              //     });
+              //   } catch (error) {
+//     console.error("Error", error);
+//   }
+// }
+
+// setupRoomsPage();
+
 const API_URL = "https://be-2-bandung-10-production-8992.up.railway.app";
-
-document.addEventListener("DOMContentLoaded", async () => {
-  if (window.location.pathname.includes("history.html")) {
-    await getBooking();
-  } else {
-    console.error("Error", error);
-  }
-});
-
 async function getBooking() {
   try {
     const response = await fetch(`${API_URL}/form`);
     const booking = await response.json();
-    console.log(booking);
-    displayBooking(booking);
+    // console.log(booking.data, "Rooms");
+
+    const getForm = document.getElementById("getForm");
+    booking.data.forEach((bookingItem) => {
+      console.log(bookingItem);
+      const div = document.createElement("tr");
+      div.innerHTML = `
+      <tr id="getForm" class="tr">
+        <td class="td">${bookingItem.fullname}</td>
+        <td class="td">${bookingItem.email}</td>
+        <td class="td">${bookingItem.phone}</td>
+        <td class="td">${bookingItem.rooms_id}</td>
+        <td class="td">${bookingItem.check_in}</td>
+        <td class="td">${bookingItem.check_out}</td>
+        <td class="td">${bookingItem.adults_amount}</td>
+        <td class="td">${bookingItem.childs_amount}</td>  
+      </tr>
+      `;
+      getForm.appendChild(div);
+    });
   } catch (err) {
     console.error(err);
   }
 }
 
-function displayBooking(booking) {
-  const bookingArray = Array.isArray(booking) ? booking : [booking];
-  const getForm = document.getElementById("getForm");
-
-  bookingArray.forEach((bookingItem) => {
-    console.log(bookingItem);
-    const td = document.createElement("td");
-    // td.innerHTML = `
-    //   <td class="th">${bookingItem.fullname}</td>
-    //   <td class="th">${bookingItem.email}</td>
-    //   <td class="th">${bookingItem.phone}</td>
-    //   <td class="th">${bookingItem.rooms_id}</td>
-    //   <td class="th">${bookingItem.check_in}</td>
-    //   <td class="th">${bookingItem.check_out}</td>
-    //   <td class="th">${bookingItem.adults_amount}</td>
-    //   <td class="th">${bookingItem.childs_amount}</td>
-    // `;
-    getForm.appendChild(td);
-  });
-}
+getBooking();

@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const rooms_id = document.getElementById("rooms").value;
-    const check_in = document.getElementById("checkin").value;
-    const check_out = document.getElementById("checkout").value;
+    const check_in =  new Date(document.getElementById("checkin").value).toISOString();
+    const check_out = new Date(document.getElementById("checkout").value).toISOString();
     const adults_amount = document.getElementById("adults").value;
     const childs_amount = document.getElementById("childs").value;
  
@@ -130,8 +130,8 @@ document.addEventListener("DOMContentLoaded", function () {
       email, 
       phone,
       rooms_id,
-      check_in,
-      check_out ,
+      check_in: new Date(Date.parse(check_in)),
+      check_out: new Date(Date.parse(check_out)),
       adults_amount,
       childs_amount,
     };
@@ -186,17 +186,14 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const response = await fetch(`${API_URL}/rooms`);
       const roomsData = await response.json();
-  
-      // Check if roomsData is an array or needs conversion
-      const rooms = Array.isArray(roomsData) ? roomsData : (roomsData.rooms || []);
+      console.log(roomsData, "Rooms")
   
       const selector = document.getElementById("rooms");
-      rooms.forEach((room) => {
-        console.log(room, "Ini Room")
-        // const optionRooms = document.createElement("option");
-        // optionRooms.value = room.id;
-        // optionRooms.textContent = room.name; // Assuming room.name is the property containing room names
-        // selector.appendChild(optionRooms);
+      roomsData.data.forEach((room) => {
+        const optionRooms = document.createElement("option");
+        optionRooms.value = room.id;
+        optionRooms.textContent = room.rooms; // Assuming room.name is the property containing room names
+        selector.appendChild(optionRooms);
       });
     } catch (error) {
       console.error("Error", error);
