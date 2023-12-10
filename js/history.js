@@ -135,14 +135,23 @@ async function getBooking() {
     booking.data.forEach((bookingItem) => {
       console.log(bookingItem);
       const div = document.createElement("tr");
+      
+      const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const formattedDate = `${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}/${date.getFullYear()}`;
+        return formattedDate;
+      };
+
+      const formattedCheckIn = formatDate(bookingItem.check_in);
+      const formattedCheckOut = formatDate(bookingItem.check_out);
       div.innerHTML = `
       <tr id="getForm" class="tr">
         <td class="td">${bookingItem.fullname}</td>
         <td class="td">${bookingItem.email}</td>
         <td class="td">${bookingItem.phone}</td>
         <td class="td">${bookingItem.rooms_id}</td>
-        <td class="td">${bookingItem.check_in}</td>
-        <td class="td">${bookingItem.check_out}</td>
+        <td class="td">${formattedCheckIn}</td>
+        <td class="td">${formattedCheckOut}</td>
         <td class="td">${bookingItem.adults_amount}</td>
         <td class="td">${bookingItem.childs_amount}</td>  
       </tr>

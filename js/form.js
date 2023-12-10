@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const rooms_id = document.getElementById("rooms").value;
-    const check_in =  new Date(document.getElementById("checkin").value).toISOString();
-    const check_out = new Date(document.getElementById("checkout").value).toISOString();
+    const check_in = document.getElementById("checkin").value;
+    const check_out = document.getElementById("checkout").value;
     const adults_amount = document.getElementById("adults").value;
     const childs_amount = document.getElementById("childs").value;
  
@@ -130,8 +130,8 @@ document.addEventListener("DOMContentLoaded", function () {
       email, 
       phone,
       rooms_id,
-      check_in: new Date(Date.parse(check_in)),
-      check_out: new Date(Date.parse(check_out)),
+      check_in,
+      check_out,
       adults_amount,
       childs_amount,
     };
